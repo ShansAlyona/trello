@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    background-image: url(../images/13.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+.menu{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 80px;
+}
+
+svg{
+   margin-left: 70px;
+   margin-right: 70px;
+}
+
+.app{
+    display: flex;
+    /* flex-direction: column; */
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 0;
+   
+    /* background: url(../images/backgrounds/linii_volnistyy_svetlyy_yarkiy_fon_37996_1920x1080.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: cover;
+}
+.boards{
+    display: flex;
+    width: 100%;
+    
+}
+.boards-item{
+    display: flex;
+    flex-direction:column;
+    align-self: baseline;
+    max-width: 250px;
+    width: 100%;
+    background-color: #586dab;
+    margin: 0 15px;
+    padding: 10px;
+    transition: .3s all ease;
+    border-radius: 3px;
+
+}
+.title{
+    padding: 5px;
+    color: white;
+    
+}
+.title:focus{
+    outline: 1px solid gray;
+}
+.list{
+    min-height: 40px;
+
+}
+.list_item{
+    background-color: bisque;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    margin: 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    width: 230px;
+    height: 88px;
+}
+
+.form{
+    border-radius: 3px;
+    margin-top: auto;
+    display: none;
+
+}
+
+.form.show {
+    display: block;
+}
+
+.textarea{
+    resize: none;
+    height: 60px;
+    border-radius: 3px;
+    border: none;
+    background: white;
+    padding: 10px;
+    width: 100%;
+}
+.textarea:focus{
+    outline: none;
+}
+.buttons{
+    display: flex;
+}
+.add_item-btn{
+    background-color: rgb(13,  136, 218);
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 100%;
+   
+
+}
+.cancel_item-btn{
+    padding: 0 auto;
+    background-color: rgb(160,  17, 12);
+    border: none;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+.add_btn{
+    height: 30px;
+    background-color: rgb(155,  155, 155, 0.3);
+    border-radius: 3px;
+    margin-top: 5px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+    cursor: pointer;
+}
+.add_btn span{
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+}
+.button{
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    align-items: center;
+    border: none;
+    background-color: rgba(19, 130, 204, 62);
+    position: absolute;
+    cursor: pointer;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    border-radius: 3px;
+    font-size: 14px;
+    
+}
+
+.board-dropdown-menu {
+    display: flex;
+    float: right;
+    position: relative;
+}
+
+.board-dropdown-menu ul {
+    position: absolute;
+    list-style: none;
+    background-color: #fff;
+    top: 30px;
+    width: 200px;
+    display: none;
+}
+
+.board-dropdown-menu ul button {
+    width: 100%;
+}
+
+.board-dropdown-menu ul.show {
+    display: block;
+}
+
+.color-picker {
+    position: absolute;
+    padding: 20px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.color-picker.show {
+    display: block;
+}
+
+.add-ticket-modal, 
+.add-tag-modal,
+.logs-modal {
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: none;
+}
+
+.add-ticket-modal.show, 
+.add-tag-modal.show,
+.logs-modal.show {
+    display: block;
+}
+
+.add-ticket-modal > .modalCloseBtn, 
+.add-tag-modal > .modalCloseBtn,
+.logs-modal > .modalCloseBtn {
+    float: right;
+}
+
+.logs-modal {
+    overflow: auto;
+}
+
+#createField.hide {
+    display: none;
+}
+
+#saveDeleteField {
+    display: none;
+}
+
+#saveDeleteField.show {
+    display: block;
+}
+
+.change-bg-modal {
+    position: absolute;
+    padding: 20px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.change-bg-modal.show {
+    display: block;
+}
+
+.tag {
+    width: 10px;
+    height: 10px;
+}

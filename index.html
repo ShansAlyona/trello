@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- <link rel="stylesheet" href="./css/uikit.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="menu">
+        <nav class="navbar navbar-expand-sm bg-light-dark navbar-dark right">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">Trello </a>
+
+
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <span contenteditable="true" class="nav-link">Введіть назву</span>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Boards
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Board</a>
+                        <a class="dropdown-item" href="#">The calendar</a>
+
+                    </div>
+                </li>
+
+            </ul>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-person-circle"
+                viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg>
+        </nav>
+
+        <div class="right-end">
+            <button type="button" class="btn nav-btn plusBoard">+ Add board </button>
+            <div class="btn-group right">
+                <button type="button" class="btn btn">Filter</button>
+                <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu" id="filterDropDownMenu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                </div>
+            </div>
+
+            <div class="btn-group right">
+                <button type="button" class="btn btn">Settings</button>
+                <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" id="logsBtn">Logs</a>
+                    <a class="dropdown-item" href="#" id="changeBgBtn">Background</a>
+                    <a class="dropdown-item" href="#" id="addTagBtn">Add tag</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="app">
+        <div class="boards">
+            <div class="boards-item">
+                <div class="boards-item-inner">
+                    <span contenteditable="true" class="title">To Do</span>
+                    <div class="board-dropdown-menu">
+                        <button class="boardDropdownMenuBtn">...</button>
+                        <ul>
+                            <li>
+                                <button class="changeBoardColorBtn">Изменить цвет</button>
+                            </li>
+                            <li>
+                                <button class="deleteBoardBtn">Удалить</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list">
+
+                </div>
+
+                <div class="form">
+                    <textarea class="textarea" placeholder="Ведіть назву цієї картки"></textarea>
+
+                    <div class="buttons">
+                        <button class="add_item-btn">Додати картку</button>
+                        <button class="cancel_item-btn">Відміна</button>
+                    </div>
+                </div>
+
+                <div class="add_btn"><span>+</span>Додати картку</div>
+
+            </div>
+
+            <div class="boards-item">
+                <div class="boards-item-inner">
+                    <span contenteditable="true" class="title">In Progress</span>
+                    <div class="board-dropdown-menu">
+                        <button class="boardDropdownMenuBtn">...</button>
+                        <ul>
+                            <li>
+                                <button class="changeBoardColorBtn">Изменить цвет</button>
+                            </li>
+                            <li>
+                                <button class="deleteBoardBtn">Удалить</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="list">
+
+                </div>
+
+                <div class="form">
+                    <textarea class="textarea" placeholder="Ведіть назву цієї картки"></textarea>
+
+                    <div class="buttons">
+                        <button class="add_item-btn">Додати картку</button>
+                        <button class="cancel_item-btn">Відміна</button>
+
+                    </div>
+                </div>
+
+                <div class="add_btn"><span>+</span>Додати картку</div>
+
+            </div>
+
+
+            <div class="boards-item">
+                <div class="boards-item-inner">
+                    <span contenteditable="true" class="title">Done</span>
+                    <div class="board-dropdown-menu">
+                        <button class="boardDropdownMenuBtn">...</button>
+                        <ul>
+                            <li>
+                                <button class="changeBoardColorBtn">Изменить цвет</button>
+                            </li>
+                            <li>
+                                <button class="deleteBoardBtn">Удалить</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list">
+
+                </div>
+
+                <div class="form">
+                    <textarea class="textarea" placeholder="Ведіть назву цієї картки"></textarea>
+
+                    <div class="buttons">
+                        <button class="add_item-btn">Додати картку</button>
+                        <button class="cancel_item-btn">Відміна</button>
+                    </div>
+                </div>
+
+                <div class="add_btn"><span>+</span>Додати картку</div>
+
+            </div>
+        </div>
+
+        <div class="color-picker">
+            <input type="color" id="colorInput" name="color">
+            <button id="chooseColorBtn">Выбрать цвет</button>
+        </div>
+
+        <div class="add-ticket-modal">
+            <button class="modalCloseBtn">X</button>
+            <form class="addTicketForm">
+                <fieldset>
+                    <label for="title">Title</label>
+                    <br>
+                    <input type="text" id="title" name="title" maxlength="20">
+                </fieldset>
+                <fieldset>
+                    <label for="expired_date">Expired date</label>
+                    <br>
+                    <input type="date" id="expired_date" name="expired_date">
+                </fieldset>
+                <fieldset>
+                    <label for="description">Description</label>
+                    <br>
+                    <textarea name="description" id="description" maxlength="2000"></textarea>
+                </fieldset>
+                <fieldset>
+                    <label for="tagsSelect">Tag</label>
+                    <br>
+                    <select name="tags" id="tagsSelect"></select>
+                </fieldset>
+                <fieldset>
+                    <label for="usersSelect">User to assign</label>
+                    <br>
+                    <select name="user" id="usersSelect"></select>
+                </fieldset>
+                <fieldset id="createField">
+                    <button type="submit">Create</button>
+                </fieldset>
+                <fieldset id="saveDeleteField">
+                    <button id="updateTicketBtn">Update</button>
+                    <button id="deleteTicketBtn">Delete</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="add-tag-modal">
+            <button class="modalCloseBtn">X</button>
+            <form>
+                <fieldset>
+                    <label for="tagNameInput">Tag name</label>
+                    <br>
+                    <input type="text" id="tagNameInput" name="tagName">
+                </fieldset>
+                <fieldset>
+                    <input type="color" id="colorInput2" name="color">
+                    <button id="chooseColorBtn2">Выбрать цвет</button>
+                </fieldset>
+                <fieldset>
+                    <select name="tags" id="tagsSelect2" multiple></select>
+                </fieldset>
+                <fieldset>
+                    <button id="deleteTagBtn">Delete tag</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="change-bg-modal">
+            <select name="bg" id="bgSelect"></select>
+            <button id="selectBgBtn">Change Background</button>
+        </div>
+
+        <div class="logs-modal">
+            <button class="modalCloseBtn">X</button>
+            <ul id="logList"></ul>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
